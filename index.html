@@ -1,79 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kalkulator BMI</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
 
-  <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\style.css" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet"
-  />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="main-title">Kalkulator BMI</h1>
+    </header>
 
-</head>
-<body>
-  <header>
-    <h1 class="main-title">Kalkulator BMI</h1>
-  </header>
+    <main>
+      <aside>
+        <article>
+          <p>
+            Hitung indeks massa tubuh Anda dengan kalkulator BMI ini dan ketahui
+            apakah berat badan Anda ideal, kurang, atau berlebih.
+          </p>
+        </article>
 
-  <main>
-    <aside>
-    <article>
-      <p>Hitung indeks massa tubuh Anda dengan kalkulator BMI ini dan ketahui apakah berat badan Anda ideal, kurang, atau berlebih.</p>
-    </article>
-    
-    <form id="bmiForm">
-      <div>
-        <h3>Jenis Kelamin</h3>
-        <input type="radio" id="laki-laki" name="jenis_kelamin" value="laki-laki"><label for="laki-laki">Laki-laki</label>
-        <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan"><label for="perempuan">Perempuan</label>
-      </div>
+        <form id="bmiForm">
+          <div>
+            <h3>Jenis Kelamin</h3>
+            <input
+              type="radio"
+              id="laki-laki"
+              name="jenis_kelamin"
+              value="laki-laki"
+            /><label for="laki-laki">Laki-laki</label>
+            <input
+              type="radio"
+              id="perempuan"
+              name="jenis_kelamin"
+              value="perempuan"
+            /><label for="perempuan">Perempuan</label>
+          </div>
 
-      <div>
-        <h3>Berat Badan (kg)</h3>
-        <input type="number" id="beratBadan" required>
-      </div>
+          <div>
+            <h3>Berat Badan (kg)</h3>
+            <input type="number" id="beratBadan" required />
+          </div>
 
-      <div>
-        <h3>Usia (tahun)</h3>
-        <input type="number" id="usia" required>
-      </div>
-      
-      <div>
-        <h3>Tinggi Badan (cm)</h3>
-        <input type="number" id="tinggiBadan" required>
-      </div>
+          <div>
+            <h3>Usia (tahun)</h3>
+            <input type="number" id="usia" required />
+          </div>
 
-      <div>
-        <button type="button" class="btn-cek" onclick="hitungBMI()">Cek BMI</button>
-        <button type="reset" class="btn-reset">Reset</button>
-      </div>
-    </form>
+          <div>
+            <h3>Tinggi Badan (cm)</h3>
+            <input type="number" id="tinggiBadan" required />
+          </div>
 
-    <article>
-        <h3>Informasi BMI</h3>
-      <p>BMI adalah ukuran yang digunakan untuk menilai apakah berat badan Anda ideal, kurang, atau berlebih berdasarkan umur, berat dan tinggi badan Anda.</p>
-    </article>
-    </aside>
+          <div>
+            <button type="button" class="btn-cek" onclick="hitungBMI()">
+              Cek BMI
+            </button>
+            <button type="reset" class="btn-reset">Reset</button>
+          </div>
+        </form>
 
-    <aside>
-      <section>
-        <h2>Hasil BMI</h2>
-        <div class="hasilContainer" id="hasilBMI">
-          <p>Hasil BMI Anda akan muncul di sini.</p>
-        </div>
-    </section>
-    </aside>
-  </main>
+        <article>
+          <h3>Informasi BMI</h3>
+          <p>
+            BMI adalah ukuran yang digunakan untuk menilai apakah berat badan
+            Anda ideal, kurang, atau berlebih berdasarkan umur, berat dan tinggi
+            badan Anda.
+          </p>
+        </article>
+      </aside>
 
-  <footer>
-    <p>&copy; 2024 Kalkulator BMI. Made with heart by Humaezi</p>
-  </footer>
-  <script src="js\script.js"></script>
-</body>
+      <aside>
+        <section>
+          <h2>Hasil BMI</h2>
+          <div class="hasilContainer" id="hasilBMI">
+            <p>Hasil BMI Anda akan muncul di sini.</p>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Kalkulator BMI. Made with heart by Humaezi</p>
+    </footer>
+    <script src="js\script.js"></script>
+  </body>
 </html>
