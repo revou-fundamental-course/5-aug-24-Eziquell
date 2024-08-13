@@ -17,9 +17,10 @@ function hitungBMI() {
       status = "Kegemukan (Obesitas)";
     }
 
-    document.getElementById(
-      "hasilBMI"
-    ).textContent = `BMI Anda: ${bmi} \n ${status}`;
+    // hasil BMI
+    var hasilBmi = "<span class = 'bmi-value'>" + bmi + "</span><br>" +
+    "<span class = 'status'> " + status + "</span>";
+    document.getElementById('hasilBMI').innerHTML = hasilBmi;
   } else {
     alert("Harap masukkan nilai berat dan tinggi badan yang valid!");
   }
