@@ -1,3 +1,4 @@
+/* Untuk keseluruhan */
 * {
   font-family: poppins, sans-serif;
   box-sizing: border-box;
@@ -22,11 +23,13 @@ header {
   z-index: 1000;
 }
 
+/* Judul */
 .main-title {
   margin: 0;
   font-size: 24px;
 }
 
+/* Aside */
 main {
   display: flex;
   justify-content: space-around;
@@ -58,6 +61,7 @@ input[type="number"] {
   margin-top: 5px;
 }
 
+/* Tombol */
 .btn-cek,
 .btn-reset {
   background-color: #1399ff;
@@ -95,25 +99,34 @@ section h2 {
   text-align: center;
 }
 
+/* Hasil BMI */
 #hasilBMI {
-  text-align: center;
-  background-color: #f4f4f4;
-  box-shadow: inset 10px 10px 5px -10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(194, 243, 255);
+  box-shadow: inset 10px 10px 5px -10px rgba(0, 0, 0, 0.4);
   width: 60%;
-  height: 100px;
+  height: 110px;
 }
 
 #hasilBMI .bmi-value {
   font-size: 36px;
   font-weight: bold;
   color: #1399ff;
+  margin: 0;
+  padding-top: 40px;
 }
 
 #hasilBMI .status {
-  margin-top: -10px;
+  font-size: 14px;
   font-weight: bolder;
+  margin: 0;
+  padding-bottom: 40px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 10px;
