@@ -20,19 +20,19 @@ function hitungBMI() {
     }
 
     // Keterangan hasil BMI
-    let moreStatus;
-    if (bmi < 18.5) {
-      moreStatus = "Kekurangan berat badan";
-    } else if (bmi >= 18.5 && bmi <= 24.9) {
-      moreStatus = `Hasil BMI anda diantara 18.5 dan 24.9
-      Anda berada dalam kategori normal atau ideal.
-      Cara terbaik untuk menjaga berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.
-      Jika BMI anda berada dalam kategori ini maka anda dianjurkan untuk menjaga pola makan dan hidup sehat.`;
-    } else if (bmi >= 25 && bmi <= 29.9) {
-      moreStatus = "Hasil BMI anda diantara 25 dan 29.9\n\nAnda berada dalam kategori overweight atau berat badan berlebih.\nCara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.\nJika BMI anda berada dalam kategori ini maka anda dianjurkan untuk menurunkan berat badan hingga batas normal.";
-    } else {
-      moreStatus = "Kegemukan (Obesitas)";
-    }
+    // let moreStatus;
+    // if (bmi < 18.5) {
+    //   moreStatus = "Kekurangan berat badan";
+    // } else if (bmi >= 18.5 && bmi <= 24.9) {
+    //   moreStatus = `Hasil BMI anda diantara 18.5 dan 24.9
+    //   Anda berada dalam kategori normal atau ideal.
+    //   Cara terbaik untuk menjaga berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.
+    //   Jika BMI anda berada dalam kategori ini maka anda dianjurkan untuk menjaga pola makan dan hidup sehat.`;
+    // } else if (bmi >= 25 && bmi <= 29.9) {
+    //   moreStatus = "Hasil BMI anda diantara 25 dan 29.9\n\nAnda berada dalam kategori overweight atau berat badan berlebih.\nCara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.\nJika BMI anda berada dalam kategori ini maka anda dianjurkan untuk menurunkan berat badan hingga batas normal.";
+    // } else {
+    //   moreStatus = "Kegemukan (Obesitas)";
+    // }
 
     // Hasil BMI
     var hasilBmi = "<span class = 'bmi-value'>" + bmi + "</span><br>" +
@@ -40,11 +40,21 @@ function hitungBMI() {
     document.getElementById('hasilBMI').innerHTML = hasilBmi;
 
     // Detail hasil BMI
-    var detailHasil = moreStatus;
-    document.getElementById('detailHasil').innerHTML = detailHasil;
+    // var detailHasil = moreStatus;
+    // document.getElementById('detailHasil').innerHTML = detailHasil;
 
     // Peringatan ketika tidak mengisi form
   } else {
     alert("Harap masukkan nilai berat dan tinggi badan yang valid!");
   }
+}
+
+// Reset form dan hasil
+function resetForm() {
+  document.getElementById("beratBadan").value = "";
+  document.getElementById("tinggiBadan").value = "";
+  document.getElementById("usia").value = "";
+  document.getElementById("laki-laki").checked = false;
+  document.getElementById("perempuan").checked = false;
+  document.getElementById("hasilBMI").innerHTML = "";
 }
